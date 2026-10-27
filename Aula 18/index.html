@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arena Pokémon</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <h1 class="painel">Cadastre seu Pokémon</h1>
+
+    <form method="post" id="form-pokemon" class="area">
+        <div class="label">
+            <label for="treinador">Nome do treinador</label>
+            <input
+                type="text"
+                id="treinador"
+                placeholder="Ex. Ash"
+                required
+            >
+        </div>
+
+        <div class="label">
+            <label for="nome">Nome do Pokémon</label>
+            <input
+                type="text"
+                id="nome"
+                placeholder="Ex. Pikachu"
+                autocomplete="off"
+                required
+            >
+        </div>
+
+        <div id="sugestoes" class="sugestoes"></div>
+
+        <div class="label">
+            <label for="tipo">Tipo do Pokémon</label>
+            <input
+                type="text"
+                id="tipo"
+                placeholder="Preenchido automaticamente"
+            >
+        </div>
+
+        <div class="label">
+            <label for="cp">CP do Pokémon</label>
+            <input
+                type="number"
+                id="cp"
+                placeholder="Ex. 500"
+                min="100"
+                required
+            >
+        </div>
+
+        <p id="feedback" role="status" aria-live="polite"></p>
+
+        <div class="botoes">
+            <button type="submit" id="btn">Cadastrar</button>
+            <button type="button" id="btn-reset">Limpar campos</button>
+        </div>
+    </form>
+
+    <h2 class="titulo-lista">Meus Pokémon</h2>
+
+    <div id="lista-cards" class="lista-cards"></div>
+</body>
+</html>
